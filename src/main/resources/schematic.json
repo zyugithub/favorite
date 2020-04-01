@@ -1,0 +1,55 @@
+{
+    "project": "com.rising.mis",
+    "source": "info_commodity",
+    "outputType": "FILE",
+    "contexts": [
+        {
+            "templateType": "JAVA_GETTER_SETTER",
+            "targetPackage": "entity.@{moduleName}",
+            "entityAnnotation": true,
+            "ignoredColumns": false
+        },
+        {
+            "templateType": "FILE_TEMPLATE",
+            "template": "@{ClassName}DTO.java",
+            "targetPackage": "dto.@{moduleName}",
+            "entityAnnotation": false,
+            "ignoredColumns": true
+        },
+        {
+            "templateType": "FILE_TEMPLATE",
+            "template": "@{ClassName}Controller.java",
+            "targetPackage": "controller.@{moduleName}",
+            "entityAnnotation": false,
+            "ignoredColumns": true
+        },
+        {
+            "templateType": "FILE_TEMPLATE",
+            "template": "@{ClassName}BO.java",
+            "targetPackage": "bo.@{moduleName}",
+            "entityAnnotation": false,
+            "ignoredColumns": true
+        },
+        {
+            "templateType": "FILE_TEMPLATE",
+            "template": "@{ClassName}Service.java",
+            "targetPackage": "service.@{moduleName}",
+            "entityAnnotation": false,
+            "ignoredColumns": true
+        },
+        {
+            "templateType": "FILE_TEMPLATE",
+            "template": "@{ClassName}Mapper.java",
+            "targetPackage": "mapper.@{moduleName}",
+            "entityAnnotation": false,
+            "ignoredColumns": true
+        },
+        {
+            "templateType": "FILE_TEMPLATE",
+            "template": "@{moduleName}@{ClassName}Provider.java",
+            "targetPackage": "sqlprovider.@{moduleName}",
+            "entityAnnotation": false,
+            "ignoredColumns": true
+        }
+    ]
+}
